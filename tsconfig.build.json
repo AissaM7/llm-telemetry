@@ -1,0 +1,20 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "outDir": "dist",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*",
+        "grafana/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "__tests__",
+        "**/*.test.ts"
+    ]
+}

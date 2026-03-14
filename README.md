@@ -213,25 +213,9 @@ const uninstall = installFetchInterceptor(tracer, {
 
 ## Import the Grafana dashboard
 
-The SDK ships a pre-built Grafana dashboard JSON. You can import it programmatically or manually.
+The SDK ships a pre-built Grafana dashboard JSON. You can import it to get up and running quickly.
 
-### Option A: programmatic import
-
-```typescript
-import { GRAFANA_DASHBOARD } from '@llm-telemetry/react-native';
-
-// POST the dashboard JSON to Grafana's provisioning API
-await fetch('https://your-grafana.example.com/api/dashboards/db', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer <your-grafana-api-key>',
-    },
-    body: JSON.stringify({ dashboard: GRAFANA_DASHBOARD, overwrite: true }),
-});
-```
-
-### Option B: manual import
+### Manual import
 
 1. Copy `grafana/dashboard.json` from the installed package.
 2. In Grafana, go to **Dashboards** → **Import** → paste the JSON.
